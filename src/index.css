@@ -1,0 +1,17 @@
+@import-normalize;
+
+body {
+  font-family: var(--font-roboto);
+  background-color: #212426;
+  background: url("../src/assets/image.jpg") no-repeat center center fixed;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-size: cover;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
