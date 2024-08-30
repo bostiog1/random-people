@@ -27,8 +27,10 @@ export const fetchUsers = createAsyncThunk<
   number,
   { rejectValue: string }
 >("users/fetchUsers", async (count, { rejectWithValue }) => {
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
   try {
-    const response = await fetch(`https://randomuser.me/api/?results=${count}`);
+    const response = await fetch(`${API_BASE_URL}/?results=${count}`);
     // const response = await fetch(`https://randomuser.me/api/invalid-endpoint`);
     if (!response.ok) {
       throw new Error("Network response was not ok. Check the endpoint.");
